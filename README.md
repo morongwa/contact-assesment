@@ -2,6 +2,37 @@
 Contact application
 
 ### Installation
-The app requires a MS SQL database [webcore]. Please ensure that this database is created and start the contact.app.mvc project. 
+You need to have Docker Engine and Docker Compose to build the container. Please follow the instructions below to get started.
 
-This is a Web application.
+1. Clone repository
+```
+  git clone git@github.com:morongwa/contact-assesment.git contact-app
+```
+2. Create the docker containers
+```
+  cd contact-app
+  docker-compose build
+ ```
+ 3. Run the docker container
+ ```
+  docker-compose up
+ ```
+ 
+ ### Build the application
+ Run the following dotnet commands inside the aplication folder [contact-app] to build the application or run tests.
+ 
+ ```
+  echo "To build the application"
+  dotnet build -c Release
+  
+  echo "To restore packages"
+  dotnet restore
+  
+  echo "To run tests"
+  dotnet test
+ ```
+
+### ToDo
+- Add contact number regex to validate phone numbers
+- Add named group views
+- Review css styling
