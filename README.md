@@ -40,3 +40,6 @@ You need to have Docker Engine and Docker Compose to build the container. Please
 - Add contact number regex to validate phone numbers
 - Add named group views
 - Review css styling
+- Api for Countries & Province
+- Select dropdown for Countries & Province in add contact
+
