@@ -1,0 +1,66 @@
+﻿@model contact.app.mvc.Models.ModelSignIn
+@{
+
+    ViewData["Title"] = "Sign in";
+    Layout = "~/Views/Shared/_Layout_Start.cshtml";
+}
+
+<div class="row align-items-center g-lg-5 py-5">
+    <div class="col-lg-7 text-center text-lg-start">
+        <h1 class="display-4 fw-bold lh-1 mb-3">Sign in</h1>
+        <p class="col-lg-10 fs-4">Use this form to gain access to the contact app and start managing all aspects of your contacts.</p>
+    </div>
+    <div class="col-md-10 mx-auto col-lg-5">
+        <form asp-action="SignIn" class="p-4 p-md-5 border rounded-3 bg-light needs-validation" novalidate>
+            @if (!string.IsNullOrEmpty(Model.Message))
+            {
+                <div class="mb-3">
+                    <small class="text-muted">@Html.Raw(Model.Message)</small>
+                </div>
+            }
+            <div class="form-floating mb-3">
+                <input type="text" class="form-control" asp-for="Username" placeholder="Username" required>
+                <label for="floatingInput">Username</label>
+                <span class="invalid-feedback" asp-validation-for="Username">Username is required</span>
+            </div>
+            <div class="form-floating mb-3">
+                <input type="password" class="form-control" asp-for="Password" placeholder="Password" required>
+                <label for="floatingPassword">Password</label>
+                <span class="invalid-feedback" asp-validation-for="Password">Password is required</span>
+            </div>
+            <div class="checkbox mb-3">
+                <label>
+                    <input type="checkbox" value="remember-me"> Remember me
+                </label>
+            </div>
+            <button type="submit" class="w-100 btn btn-lg btn-primary">Sign In</button>
+            <hr class="my-4">
+            <small class="text-muted">By clicking Sign up, you agree to the terms of use.</small>
+        </form>
+    </div>
+</div>
+
+@section Scripts{
+    <script type="text/javascript">
+        (() => {
+            'use strict'
+
+            // Fetch all the forms we want to apply custom Bootstrap validation styles to
+            const forms = document.querySelectorAll('.needs-validation');
+
+            // Loop over them and prevent submission
+            Array.from(forms).forEach(form => {
+                form.addEventListener('submit',
+                    event => {
+                        if (!form.checkValidity()) {
+                            event.preventDefault();
+                            event.stopPropagation();
+                        }
+
+                        form.classList.add('was-validated');
+                    },
+                    false);
+            });
+        })();
+    </script>
+}

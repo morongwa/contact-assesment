@@ -1,0 +1,32 @@
+﻿@model IEnumerable<contact.app.business.entity.OnlineUser>
+@{
+    ViewData["Title"] = "About";
+    Layout = "~/Views/Shared/_Layout_Start.cshtml";
+}
+
+<div class="row align-items-center g-lg-5 py-5">
+    <div class="col-lg-7 text-center text-lg-start">
+        <h1 class="display-4 fw-bold lh-1 mb-3">About</h1>
+        <p class="col-lg-10 fs-4">Contact management application. DotNet web core using entity framework.</p>
+        <div class="col-lg-10">
+            <div class="d-grid gap-2 d-sm-flex justify-content-sm-start">
+                <a class="btn btn-primary btn-lg px-4 gap-3" href="/Start/SignIn">Login</a>
+                <a class="btn btn-outline-secondary btn-lg px-4" href="/Start/Register">Register</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-10 mx-auto col-lg-5">
+        <div class="p-4 p-md-5 border rounded-3 bg-light">
+            <h2 class="display-1 text-center py-1"><i class="bi bi-people"></i></h2>
+            <hr class="my-4">
+            <h5>Tools</h5>
+            <ul>
+                <li>Bootstrap v5.0.2</li>
+                <li>DotNet Web Core (MVC) </li>
+                <li>MS SQL Database</li>
+                <li>Entity Framework</li>
+                <li>Repository pattern</li>
+            </ul>
+        </div>
+    </div>
+</div>
