@@ -44,9 +44,9 @@
                         <div class="input-group has-validation">
                             <span class="input-group-text">+27</span>
                             <input type="text" class="form-control" asp-for="ContactPhone" placeholder="012345678" required>
-                            <div class="invalid-feedback">
-                                Your phone number is required.
-                            </div>
+
+                            <span asp-validation-for="ContactPhone" class="w-100 text-danger mt-1"></span>
+                            
                         </div>
                     </div>
 

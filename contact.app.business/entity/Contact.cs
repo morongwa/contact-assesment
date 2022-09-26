@@ -17,6 +17,7 @@ namespace contact.app.business.entity
         public string ContactEmail { get; set; }
 
         [Required(ErrorMessage = "ContactPhone is required")]
+        [RegularExpression(@"^0\d{9}|^\+?\d{2}\d{9}|\d{10}|(?: *?\+?\-?[\(]*?\d+[\)]*? *?){10,}", ErrorMessage = "Must be a valid phone")]
         public string ContactPhone { get; set; }
 
         public string AddressStreet { get; set; }
