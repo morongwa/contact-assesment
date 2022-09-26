@@ -17,6 +17,10 @@ You need to have Docker Engine and Docker Compose to build the container. Please
  ```
   docker-compose up
  ```
+ 4. Navigate to the url http://localhost:8000 in your browser to access the application
+ ```
+  http://localhost:8000
+ ```
  
  ### Build the application
  Run the following dotnet commands inside the aplication folder [contact-app] to build the application or run tests.
@@ -36,3 +40,6 @@ You need to have Docker Engine and Docker Compose to build the container. Please
 - Add contact number regex to validate phone numbers
 - Add named group views
 - Review css styling
+- Api for Countries & Province
+- Select dropdown for Countries & Province in add contact
+
